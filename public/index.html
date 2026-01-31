@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENGANOS | Rock</title>
+    <link rel="icon" type="image/jpg" href="./img/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Montserrat:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <div class="cursor-custom"></div>
+    <div id="canvas-container"></div>
+
+    <nav>
+        <div class="logo">MENGANOS</div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#galeria">Fotos</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#fechas">Fechas</a></li>
+            <li><a href="#musica">Música</a></li>
+            <li><a href="#redes">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h1 class="glitch-text" data-text="TAN LEJOS TAN CERCA">TAN LEJOS TAN CERCA</h1>
+                <p class="tagline">Álbum</p>
+                <div class="album-wrapper">
+                    <img src="./img/tapa_disco.PNG" alt="Tan Cerca Tan Lejos" class="album-img">
+                </div>
+                <a href="#musica" class="btn-main" data-text="ESCUCHAR">ESCUCHAR</a>
+            </div>
+        </section>
+
+        <section id="galeria" class="bento-gallery">
+            <h2 class="section-title">FOTOS</h2>
+            <div class="bento-grid">
+                <div class="bento-item tall"><img src="./img/foto_20.jpg" alt="Foto 1" loading="lazy"></div>
+                <div class="bento-item wide"><img src="./img/foto_15.1.png" alt="Foto 2" loading="lazy"></div>
+                <div class="bento-item"><img src="./img/foto_23.jpg" alt="Foto 3" loading="lazy"></div>
+                <div class="bento-item"><img src="./img/foto_24.jpg" alt="Foto 4" loading="lazy"></div>
+                <div class="bento-item wide"><img src="./img/foto_9.1.png" alt="Foto 5" loading="lazy"></div>
+            </div>
+        </section>
+
+        <section id="videos" class="video-section">
+            <h2 class="section-title">VIDEOS</h2>
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/5O7bg1r_OwU" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <p class="video-caption">TUS MENTIRAS // OFFICIAL VIDEO</p>
+                </div>
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/uZ7CUwDUddQ" frameborder="0" allowfullscreen loading="lazy"></iframe>
+                    </div>
+                    <p class="video-caption">TAN LEJOS TAN CERCA // SESSION</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="fechas" class="tour">
+            <h2 class="section-title">FECHAS</h2>
+            <div class="tour-grid">
+                <div class="tour-item">
+                    <span class="date">15 MAY</span> <span class="venue">EL SÓTANO</span> <span class="city">CABA</span> 
+                    <button class="btn-sm">TICKETS</button>
+                </div>
+                <div class="tour-item">
+                    <span class="date">02 JUN</span> <span class="venue">TEATRO ROCK</span> <span class="city">ROSARIO</span> 
+                    <button class="btn-sm">TICKETS</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="musica" class="player-section">
+            <div class="rack-container">
+                <div class="rack-unit">
+                    <div class="rack-header">
+                        <span>MENGANOS // AUDIO RACK</span>
+                        <div class="led-power" id="led"></div>
+                    </div>
+                    <div class="display-screen" id="main-display">
+                        <div class="noise"></div> 
+                        <div class="track-info">
+                            <span id="track-number">TRK 01</span>
+                            <span class="track-name" id="display-name">---</span>
+                        </div>
+                        <div class="progress-container" id="progress-wrapper">
+                            <div class="progress-bar" id="progress-bar"></div>
+                        </div>
+                        <div class="visualizer-bars" id="visualizer"></div>
+                    </div>
+                    <div class="rack-controls">
+                        <button class="btn-retro" id="prev-btn"><i class="fas fa-backward"></i></button>
+                        <button class="btn-rack" id="play-pause">
+                            <img src="./img/boton-de-play.png" id="play-icon" alt="Play">
+                        </button>
+                        <button class="btn-retro" id="next-btn"><i class="fas fa-forward"></i></button>
+                    </div>
+                </div>
+                
+                <div class="playlist-sidebar">
+                    <h3>TRACKLIST // 11 TEMAS</h3>
+                    <ul id="track-list"></ul>
+                </div>
+            </div>
+            <audio id="main-audio" preload="none"></audio>
+        </section>
+    </main>
+
+    <footer id="redes" class="main-footer">
+        <div class="social-links">
+            <a href="https://www.instagram.com/menganosoficial/" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-spotify"></i></a>
+            <a href="https://www.youtube.com/@menganosoficial241" class="social-icon"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p class="copyright">© 2026 MENGANOS | ROCK</p>
+        <p class="copyright">LR-CREACIONES DIGITALES</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="./script/script.js"></script>
+</body>
+</html>
